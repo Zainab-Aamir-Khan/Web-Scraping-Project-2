@@ -6,9 +6,8 @@ soup = BeautifulSoup(url, 'lxml')
 
 # print(requests.get("https://news.ycombinator.com/news").status_code)
 
-main = soup.find('span', class_ = 'titleline').text
+main = soup.find('td', class_ = 'title')
 print(main)
 
-mainContent = main.a.text
-print(mainContent)
+
 
