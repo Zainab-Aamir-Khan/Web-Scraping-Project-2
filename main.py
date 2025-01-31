@@ -8,7 +8,7 @@ soup = BeautifulSoup(url, 'lxml')
 mainContent = soup.find('table').text
 # print(mainContent)
 
-for main in soup.find_all('tr', class_ = 'athing submission'):
+for main in mainContent.find_all('tr', class_ = 'athing submission'):
 
     print(main)
 
