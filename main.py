@@ -1,8 +1,14 @@
 from bs4 import BeautifulSoup
 import requests
 
-url = requests.get("git push -u origin main").text
+url = requests.get("https://news.ycombinator.com/news").text
 soup = BeautifulSoup(url, 'lxml')
 
+# print(requests.get("https://news.ycombinator.com/news").status_code)
 
+main = soup.find('span', class_ = 'titleline').text
+print(main)
+
+mainContent = main.a.text
+print(mainContent)
 
