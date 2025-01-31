@@ -8,9 +8,8 @@ soup = BeautifulSoup(url, 'lxml')
 mainContent = soup.find('table').text
 # print(mainContent)
 
-for main in mainContent.find_all("span"):
-    news = main.tr.text
-    print(news)
+for main in mainContent.find_all('td', class_ = 'title'):
+    print(main)
 
 
 
