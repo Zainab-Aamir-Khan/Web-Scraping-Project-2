@@ -9,7 +9,9 @@ mainContent = soup.find('table')
 # print(mainContent)
 
 for main in mainContent.find_all('td', class_ = 'title'):
-    print(main)
+    print(main.text)
+
+print(' ')
 
 
 
