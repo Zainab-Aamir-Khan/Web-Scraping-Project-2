@@ -12,7 +12,7 @@ for news in mainContent.find_all('td', class_ = 'title'):
     print(news.text)
 
 for points in mainContent.find_all('span', class_ = 'score'):
-    print(points)
+    print(points.text)
 
     print(' ')
 
